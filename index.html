@@ -53,21 +53,22 @@
     </nav>
     <!-- END nav -->
 
-      <section class="site-hero overlay" style="background-image: url(images/hero_5.jpg)" data-stellar-background-ratio="0.5" id="section-home">
-        <div class="container">
-          <div class="row site-hero-inner justify-content-center align-items-center">
-            <div class="col-md-10 text-center" data-aos="fade-up">
-              <h1 class="heading">Stay With Us &amp; Relax</h1>
-            </div>
+    <section class="site-hero overlay" style="background-image: url(images/hero_5.jpg); background-position: center center; background-size: cover;" data-stellar-background-ratio="0.5" id="section-home">
+      <div class="container">
+        <div class="row site-hero-inner justify-content-center align-items-center">
+          <div class="col-md-10 text-center" data-aos="fade-up">
+            <h1 class="heading">Stay With Us &amp; Relax</h1>
           </div>
         </div>
-
-        <a class="mouse smoothscroll" href="#next" >
-          <div class="mouse-icon">
-            <span class="mouse-wheel"></span>
-          </div>
-        </a>
-      </section>
+      </div>
+    
+      <a class="mouse smoothscroll" href="#next">
+        <div class="mouse-icon">
+          <span class="mouse-wheel"></span>
+        </div>
+      </a>
+    </section>
+    
       <!-- END section -->
 
       <section class="section bg-light pb-0"  >
@@ -79,23 +80,23 @@
               <form action="#">
                 <div class="row">
                   <div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
-                    <label for="checkin_date" class="font-weight-bold text-black">Check In</label>
+                    <label for="checkin_date" class="font-weight-bold text-gray">Check In</label>
                     <div class="field-icon-wrap">
                       <div class="icon"><span class="icon-calendar"></span></div>
-                      <input type="text" id="checkin_date" class="form-control">
+                      <input type="text" id="checkin_date" class="form-control" placeholder="Select check-in date">
                     </div>
                   </div>
                   <div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
-                    <label for="checkout_date" class="font-weight-bold text-black">Check Out</label>
+                    <label for="checkout_date" class="font-weight-bold text-gray">Check Out</label>
                     <div class="field-icon-wrap">
                       <div class="icon"><span class="icon-calendar"></span></div>
-                      <input type="text" id="checkout_date" class="form-control">
+                      <input type="text" id="checkout_date" class="form-control" placeholder="Select check-out date">
                     </div>
                   </div>
                   <div class="col-md-6 mb-3 mb-md-0 col-lg-3">
                     <div class="row">
                       <div class="col-md-6 mb-3 mb-md-0">
-                        <label for="adults" class="font-weight-bold text-black">Adults</label>
+                        <label for="adults" class="font-weight-bold text-gray">Adults</label>
                         <div class="field-icon-wrap">
                           <div class="icon"><span class="ion-ios-arrow-down"></span></div>
                           <select name="" id="adults" class="form-control">
@@ -107,7 +108,7 @@
                         </div>
                       </div>
                       <div class="col-md-6 mb-3 mb-md-0">
-                        <label for="children" class="font-weight-bold text-black">Children</label>
+                        <label for="children" class="font-weight-bold text-gray">Children</label>
                         <div class="field-icon-wrap">
                           <div class="icon"><span class="ion-ios-arrow-down"></span></div>
                           <select name="" id="children" class="form-control">
@@ -121,7 +122,10 @@
                     </div>
                   </div>
                   <div class="col-md-6 col-lg-3 align-self-end">
-                    <button class="btn btn-primary btn-block text-white">Check Availabilty</button>
+                    <button class="btn btn-block text-white" 
+                            style="background-color: gray; border: none; color: #222; padding: 12px 20px; font-size: 16px; border-radius: 4px; font-weight: bold;">
+                      Check Availability
+                    </button>
                   </div>
                 </div>
               </form>
