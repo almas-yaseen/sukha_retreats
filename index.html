@@ -24,32 +24,65 @@
     </head>
     <body data-spy="scroll" data-target="#templateux-navbar" data-offset="200">
 
-    <nav class="navbar navbar-expand-lg navbar-dark pb_navbar pb_scrolled-light" id="templateux-navbar">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img src="images/sukha white png.png" alt="Sukha Retreats Logo" style="height: 110px;">
-        </a>         
-        <div class="site-menu-toggle js-site-menu-toggle  ml-auto"  data-aos="fade" data-toggle="collapse" data-target="#templateux-navbar-nav" aria-controls="templateux-navbar-nav" aria-expanded="false" aria-label="Toggle navigation">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <!-- END menu-toggle -->
+      <style>
+        .custom-button {
+    background-color: #C89B3C;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
 
-        <div class="collapse navbar-collapse" id="templateux-navbar-nav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a class="nav-link" href="#section-home">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#section-about">About</a></li>
-            <!-- <li class="nav-item"><a class="nav-link" href="#section-team">Team</a></li> -->
-            <li class="nav-item"><a class="nav-link" href="#section-rooms">Rooms</a></li>
-            <li class="nav-item"><a class="nav-link" href="#section-menus">Menus</a></li>
-            <li class="nav-item"><a class="nav-link" href="#section-events">Events</a></li>
-            <li class="nav-item"><a class="nav-link" href="#section-contact">Contact</a></li>
-            <!-- <li class="nav-item cta-btn ml-xl-2 ml-lg-2 ml-md-0 ml-sm-0 ml-0"><a class="nav-link" href="#" target="_blank"><span class="pb_rounded-4 px-4 rounded">Get Started</span></a></li> -->
-          </ul>
+.custom-button:hover {
+    background-color: #9f7620;
+}
+
+.custom-button span {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100px;
+}
+
+        .navbar-custom {
+          backdrop-filter: blur(10px);
+          background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+        }
+        .navbar-custom .nav-link {
+          color: white !important; /* Ensures clear visibility */
+        }
+      </style>
+      
+      <nav class="navbar navbar-expand-lg navbar-dark pb_navbar pb_scrolled-light navbar-custom" id="templateux-navbar">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/sukha white png.png" alt="Sukha Retreats Logo" style="height: 70px;">
+          </a>         
+          <div class="site-menu-toggle js-site-menu-toggle ml-auto" data-aos="fade" data-toggle="collapse" data-target="#templateux-navbar-nav" aria-controls="templateux-navbar-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+      
+          <div class="collapse navbar-collapse" id="templateux-navbar-nav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item"><a class="nav-link" href="#section-home">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#section-about">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="#section-rooms">Rooms</a></li>
+              <li class="nav-item"><a class="nav-link" href="#section-menus">Menus</a></li>
+              <li class="nav-item"><a class="nav-link" href="#section-events">Events</a></li>
+              <li class="nav-item"><a class="nav-link" href="#section-contact">Contact</a></li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+      
     <!-- END nav -->
 
     <section class="site-hero overlay" style="background-image: url(images/hero_5.jpg); background-position: center center; background-size: cover;" data-stellar-background-ratio="0.5" id="section-home">
@@ -121,8 +154,7 @@
                     </div>
                   </div>
                   <div class="col-md-6 col-lg-3 align-self-end">
-                    <button class="btn btn-block text-white" 
-                            style="background-color: gray; border: none; color: #222; padding: 12px 20px; font-size: 16px; border-radius: 4px; font-weight: bold;">
+                    <button class="btn btn-block text-white custom-button custom-button custom-button:hover "> 
                       Check Availability
                     </button>
                   </div>
@@ -144,14 +176,17 @@
             <div class="col-md-12 col-lg-4 order-lg-1" data-aos="fade-up">
               <h2 class="heading mb-4">Hey there!</h2>
               <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-              <p>
-                <a href="https://vimeo.com/channels/staffpicks/93951774" 
+              
+                <!-- <a href="https://vimeo.com/channels/staffpicks/93951774" 
                    data-fancybox 
-                   class="p-2 text-white py-1 mr-3 text-uppercase letter-spacing-1" 
-                   style="border-radius: 10px; display: inline-block; background-color: gray;">
+                   class="custom-button custom-button custom-button:hover" 
+                   >
                   Watch the video
-                </a>
-              </p>
+                </a> -->
+                <button class="custom-button custom-button:hover custom-button span">
+                  Watch Video
+                </button>
+              
             </div>
             
           </div>

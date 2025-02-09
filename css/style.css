@@ -1,6 +1,6 @@
-body {
+  body {
   background: #fff;
-  font-family: "Roboto", arial, sans-serif;
+  font-family: "Montserrat", arial, sans-serif;
   font-weight: 200;
   font-size: 16px;
   line-height: 1.8;
@@ -31,7 +31,7 @@ h1, h2, h3, h4, h5 {
   font-family: "Playfair Display", times, serif; }
 
 .font-family-sans-serif {
-  font-family: "Roboto", arial, sans-serif; }
+  font-family: "Montserrat", arial, sans-serif; }
 
 .bg-light {
   background: #f2f4fb !important; }
@@ -239,7 +239,7 @@ textarea.form-control {
 .visit-section .heading {
   font-size: 15px;
   text-transform: uppercase;
-  font-family: "Roboto", arial, sans-serif;
+  font-family: "Montserrat", arial, sans-serif;
   color: #b3b3b3;
   letter-spacing: .2em;
   margin-bottom: 30px; }
@@ -602,7 +602,7 @@ textarea.form-control {
   .side-box .heading, .sidebar-search .heading {
     font-size: 18px;
     margin-bottom: 30px;
-    font-family: "Roboto", arial, sans-serif; }
+    font-family: "Montserrat", arial, sans-serif; }
 
 .post-list li {
   margin-bottom: 20px; }
@@ -645,7 +645,7 @@ textarea.form-control {
     font-size: 14px;
     letter-spacing: .2em;
     font-weight: bold;
-    font-family: "Roboto", arial, sans-serif;
+    font-family: "Montserrat", arial, sans-serif;
     text-transform: uppercase; }
 
 .post-categories li {
@@ -1197,7 +1197,7 @@ textarea.form-control {
   left: 0;
   z-index: 100;
   width: 100%;
-  padding: 50px 0; }
+  padding: 1px 0; }
   .pb_navbar .navbar-toggler:active, .pb_navbar .navbar-toggler:focus {
     outline: none; }
   .pb_navbar .navbar-brand {
@@ -1242,7 +1242,7 @@ textarea.form-control {
   @media (max-width: 991.98px) {
     .pb_navbar {
       background: #fff;
-      padding: 15px 15px; }
+      padding: 0px 0px; }
       .pb_navbar .navbar-brand {
         color: #000 !important;
         font-family: "Playfair Display", times, serif;
