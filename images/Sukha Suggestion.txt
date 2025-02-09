@@ -1,0 +1,28 @@
+Since the color of the logo is black/white we can move with a golden theme which provides a luxury feeling
+	
+We don't need top and bottom padding for the navbar when its above the hero section
+Give this code to the navbar so that text can seen clearly
+	backdrop-filter: blur(10px);
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+
+Replace Roboto with Montserrat font
+
+Button styles
+	Button background color : #C89B3C
+	Button Hover color : #9f7620
+	Button radius : 4px
+	Button text style : capitalize
+	Button text must contain only maxm of two words
+	Reserve Now button needs to be of 
+		4px button radius
+		border color #C89B3C
+		Text color #C89B3C
+	Watch the video button side padding should be minm 1rem
+
+No need of letter spacing in any Texts
+Video can be place above contact us section
+Since Resort doesnt provide any food we can replace with services
+Change image of sukha in hero since it is again used in the next section
+For the labels like Check In, Check out etc of input boxes use this color #434343
+For footer we can reduce the bottom padding to 2em
+Icon colors of address, phone and email should be white itself
