@@ -548,13 +548,13 @@ textarea.form-control {
     color: rgba(255, 255, 255, 0.5); }
   .footer-section .bordertop {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 20px; }
+    padding-top: 2px; }
   .footer-section .contact-info span.d-block {
     font-style: italic;
     color: #fff; }
   .footer-section .social a {
     font-size: 18px;
-    padding: 10px; }
+    padding: 1px; }
   .footer-section .link li {
     margin-bottom: 10px; }
 
