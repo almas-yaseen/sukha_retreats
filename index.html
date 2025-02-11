@@ -81,6 +81,10 @@
       .custom-input::placeholder {
         color: #bbb;
       }
+      .space-x-1 {
+        display: flex; /* Ensures that the children are laid out horizontally */
+        gap: 4px; /* Adds horizontal space between elements */
+      }
     </style>
 
     <nav
@@ -142,25 +146,65 @@
         background-image: url(images/34.webp);
         background-position: center center;
         background-size: cover;
+        height: 100vh; /* Full screen height */
       "
       data-stellar-background-ratio="0.5"
       id="section-home"
     >
-      <div class="container">
+      <div class="container h-100">
         <div
-          class="row site-hero-inner justify-content-center align-items-center"
+          class="row site-hero-inner justify-content-center align-items-center h-100"
         >
-          <div class="col-md-10 text-center" data-aos="fade-up">
-            <h1 class="heading">Stay With Us &amp; Relax</h1>
+          <div class="col-md-8 text-center" data-aos="fade-up">
+            <h1 class="heading text-white">Your Perfect Getaway Awaits</h1>
+            <p class="subheading text-white mb-4">
+              Relax, unwind, and create unforgettable memories with us. Escape
+              the ordinary and experience comfort like never before.
+            </p>
+
+            <!-- Buttons container with responsive layout -->
+            <div
+              class="cta-button d-flex flex-column flex-md-row justify-content-between gap-3"
+              style="width: 70%; max-width: 600px; margin: 0 auto"
+            >
+              <!-- Explore Our Rooms Button -->
+              <a
+                href="#section-rooms"
+                class="btn btn-lg smoothscroll mb-2 mb-md-0"
+                style="
+                  background-color: #c89b3c;
+                  border: none;
+                  border-radius: 4px;
+                  padding: 12px 30px;
+                  color: white;
+                  transition: background-color 0.3s ease;
+                "
+                onmouseover="this.style.backgroundColor='#9f7620';"
+                onmouseout="this.style.backgroundColor='#c89b3c';"
+              >
+                Explore Our Rooms
+              </a>
+
+              <!-- Get in Touch Button -->
+              <a
+                href="#section-contact"
+                class="btn btn-outline-light btn-lg smoothscroll"
+                style="
+                  border-radius: 5px;
+                  padding: 12px 30px;
+                  border: 2px solid #fff;
+                  color: #fff;
+                  transition: background-color 0.3s ease;
+                "
+                onmouseover="this.style.backgroundColor='#efdbd7';"
+                onmouseout="this.style.backgroundColor='transparent';"
+              >
+                Get in Touch
+              </a>
+            </div>
           </div>
         </div>
       </div>
-
-      <!-- <a class="mouse smoothscroll" href="#next">
-        <div class="mouse-icon">
-          <span class="mouse-wheel"></span>
-        </div>
-      </a> -->
     </section>
 
     <!-- <div class="container section" id="section-team">
@@ -1020,18 +1064,16 @@
             class="col-md-12 col-lg-7 ml-auto order-lg-2 position-relative mb-5"
             data-aos="fade-up"
           >
-          <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/I5N3uAdqNlw?autoplay=1&mute=1"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; autoplay"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
-        
-        
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/I5N3uAdqNlw?autoplay=1&mute=1"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; autoplay"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
           </div>
           <div class="col-md-12 col-lg-5 order-lg-1" data-aos="fade-up">
             <h2
@@ -1249,90 +1291,91 @@
     </section>
 
     <footer
-    class="section footer-section"
-    style="background: #333; color: #fff; padding: 40px 0"
-  >
-    <div class="container">
-      <div class="row">
-        <!-- Logo and Business Info -->
-        <div class="col-md-4">
-          <img
-            src="images/sukha white png.png"
-            alt="Sukha Retreats Logo"
-            style="height: 70px"
-          />
-          <p>4.824 Google reviews</p>
-          <p>Hotel & Resorts</p>
-        </div>
-  
-        <!-- Contact Info -->
-        <div class="col-md-4 contact-info">
-          <p>
-            <span class="d-block"><strong>Address:</strong></span>
-            P O, Peringazha, HMT Colony, North Kalamassery, Kalamassery,
-            Kochi, Kerala 683503
-          </p>
-          <p>
-            <span class="d-block"><strong>Phone:</strong></span>
-            <a href="tel:+919895556667" style="color: #fff; text-decoration: none">
-              +91 98955 56667
-            </a>
-          </p>
-        </div>
-  
-        <!-- WhatsApp Section -->
-        <div class="col-md-4 text-center">
-          <p><strong>Chat with us on WhatsApp</strong></p>
-          <a
-            href="https://wa.me/919895556667"
-            target="_blank"
-            style="
-              display: inline-flex;
-              align-items: center;
-              background: #25d366;
-              color: white;
-              padding:8px 15px;
-              border-radius: 5px;
-              text-decoration: none;
-              font-weight: bold;
-              font-size: 1rem;
-            "
-          >
+      class="section footer-section"
+      style="background: #333; color: #fff; padding: 40px 0"
+    >
+      <div class="container">
+        <div class="row">
+          <!-- Logo and Business Info -->
+          <div class="col-md-4">
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-              alt="WhatsApp Logo"
-              style="width: 24px; height: 24px; margin-right: 10px"
+              src="images/sukha white png.png"
+              alt="Sukha Retreats Logo"
+              style="height: 70px"
             />
-            Chat on WhatsApp
-          </a>
+            <p>4.824 Google reviews</p>
+            <p>Hotel & Resorts</p>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="col-md-4 contact-info">
+            <p>
+              <span class="d-block"><strong>Address:</strong></span>
+              P O, Peringazha, HMT Colony, North Kalamassery, Kalamassery,
+              Kochi, Kerala 683503
+            </p>
+            <p>
+              <span class="d-block"><strong>Phone:</strong></span>
+              <a
+                href="tel:+919895556667"
+                style="color: #fff; text-decoration: none"
+              >
+                +91 98955 56667
+              </a>
+            </p>
+          </div>
+
+          <!-- WhatsApp Section -->
+          <div class="col-md-4 text-center">
+            <p><strong>Chat with us on WhatsApp</strong></p>
+            <a
+              href="https://wa.me/919895556667"
+              target="_blank"
+              style="
+                display: inline-flex;
+                align-items: center;
+                background: #25d366;
+                color: white;
+                padding: 8px 15px;
+                border-radius: 5px;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 1rem;
+              "
+            >
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                alt="WhatsApp Logo"
+                style="width: 24px; height: 24px; margin-right: 10px"
+              />
+              Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="row pt-3 text-center">
+          <p class="col-12">
+            &copy;
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            Sukha Retreats. All rights reserved.
+          </p>
         </div>
       </div>
-  
-      <!-- Copyright Section -->
-      <div class="row pt-3 text-center">
-        <p class="col-12">
-          &copy;
-          <script>
-            document.write(new Date().getFullYear());
-          </script>
-          Sukha Retreats. All rights reserved.
-        </p>
-      </div>
-    </div>
-  </footer>
-  
-  <style>
-    @media (max-width: 768px) {
-      .footer-section .row {
-        text-align: center;
+    </footer>
+
+    <style>
+      @media (max-width: 768px) {
+        .footer-section .row {
+          text-align: center;
+        }
+        .footer-section .contact-info {
+          margin-top: 20px;
+        }
       }
-      .footer-section .contact-info {
-        margin-top: 20px;
-      }
-    }
-  </style>
-  
-  
+    </style>
 
     <!-- Modal -->
     <div
