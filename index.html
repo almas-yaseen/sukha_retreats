@@ -136,14 +136,16 @@
 
     <section
       class="site-hero overlay"
+      id="section-home"
       style="
         background-image: url(images/34.webp);
         background-position: center center;
-        background-size: cover;
-        height: 100vh; /* Full screen height */
+        height: auto;
+        min-height: 100vh;
+
+        transition: background-image 1s ease-in-out;
       "
       data-stellar-background-ratio="0.5"
-      id="section-home"
     >
       <div class="container h-100">
         <div
@@ -154,47 +156,47 @@
             <p class="subheading text-white mb-4">
               Relax, unwind, and create unforgettable memories with us
             </p>
-
-            <!-- Buttons container with responsive layout -->
-
-              <!-- Explore Our Rooms Button -->
-              <a
-                href="#section-rooms"
-                class="btn btn-lg smoothscroll mb-2 mb-md-0"
-                style="
-                  background-color: #c89b3c;
-                  border: none;
-                  border-radius: 4px;
-                  padding: 12px 30px;
-                  color: white;
-                  transition: background-color 0.3s ease;
-                "
-                onmouseover="this.style.backgroundColor='#9f7620';"
-                onmouseout="this.style.backgroundColor='#c89b3c';"
-              >
-                Explore Rooms
-              </a>
-
-              <!-- Get in Touch Button -->
-              <!-- <a
-                href="#section-contact"
-                class="btn btn-outline-light btn-lg smoothscroll"
-                style="
-                  border-radius: 5px;
-                  padding: 12px 30px;
-                  border: 2px solid #fff;
-                  color: #fff;
-                  transition: background-color 0.3s ease;
-                "
-                onmouseover="this.style.backgroundColor='#efdbd7';"
-                onmouseout="this.style.backgroundColor='transparent';"
-              >
-                Get in Touch
-              </a> -->
+            <a
+              href="#section-rooms"
+              class="btn btn-lg smoothscroll mb-2 mb-md-0"
+              style="
+                background-color: #c89b3c;
+                border: none;
+                border-radius: 4px;
+                padding: 12px 30px;
+                color: white;
+                transition: background-color 0.3s ease;
+              "
+              onmouseover="this.style.backgroundColor='#9f7620';"
+              onmouseout="this.style.backgroundColor='#c89b3c';"
+            >
+              Explore Rooms
+            </a>
           </div>
         </div>
       </div>
     </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const images = [
+          "images/34.webp",
+          "images/6.webp",
+          "images/40.webp",
+          "images/27.webp",
+          "images/43.webp",
+          "images/15.webp",
+        ];
+
+        let index = 0;
+        const section = document.getElementById("section-home");
+
+        setInterval(() => {
+          index = (index + 1) % images.length;
+          section.style.backgroundImage = `url(${images[index]})`;
+        }, 3000); // Change image every 2 seconds
+      });
+    </script>
 
     <section class="section" id="section-rooms">
       <div class="container">
@@ -238,7 +240,7 @@
             <a href="#" class="room">
               <figure class="img-wrap">
                 <img
-                  src="images/18.webp"
+                  src="images/rooms.webp"
                   alt="Free website template"
                   class="img-fluid mb-3"
                 />
@@ -425,8 +427,9 @@
               Our Resort Services
             </h2>
             <p class="text-white" data-aos="fade" data-aos-delay="100">
-              Immerse yourself in tranquility with activities designed to relax your body, mind, and soul. 
-              Enjoy a peaceful staycation at Sukha Retreat.
+              Immerse yourself in tranquility with activities designed to relax
+              your body, mind, and soul. Enjoy a peaceful staycation at Sukha
+              Retreat.
             </p>
           </div>
         </div>
@@ -439,7 +442,8 @@
             <div class="card service-card text-center p-4">
               <h3 class="text-dark">Guided Meditation & Yoga</h3>
               <p>
-                Find inner peace with our daily guided meditation and yoga sessions in a serene environment.
+                Find inner peace with our daily guided meditation and yoga
+                sessions in a serene environment.
               </p>
             </div>
           </div>
@@ -450,10 +454,10 @@
             data-aos-delay="100"
           >
             <div class="card service-card text-center p-4">
-
               <h3 class="text-dark">Mindfulness & Reflection</h3>
               <p>
-                Enjoy quiet moments of self-reflection in our dedicated mindfulness and journaling spaces.
+                Enjoy quiet moments of self-reflection in our dedicated
+                mindfulness and journaling spaces.
               </p>
             </div>
           </div>
@@ -466,7 +470,8 @@
             <div class="card service-card text-center p-4">
               <h3 class="text-dark">Nature Walks & Forest Bathing</h3>
               <p>
-                Reconnect with nature through guided walks, absorbing the peaceful sounds and sights of the retreat.
+                Reconnect with nature through guided walks, absorbing the
+                peaceful sounds and sights of the retreat.
               </p>
             </div>
           </div>
@@ -477,10 +482,10 @@
             data-aos-delay="300"
           >
             <div class="card service-card text-center p-4">
-
               <h3 class="text-dark">Spiritual & Prayer Spaces</h3>
               <p>
-                Find solitude and spirituality in our peaceful namaz hall and meditation areas.
+                Find solitude and spirituality in our peaceful namaz hall and
+                meditation areas.
               </p>
             </div>
           </div>
@@ -493,7 +498,8 @@
             <div class="card service-card text-center p-4">
               <h3 class="text-dark">Soothing Sound Therapy</h3>
               <p>
-                Relax with calming soundscapes, including live flute performances and nature-inspired melodies.
+                Relax with calming soundscapes, including live flute
+                performances and nature-inspired melodies.
               </p>
             </div>
           </div>
@@ -506,14 +512,14 @@
             <div class="card service-card text-center p-4">
               <h3 class="text-dark">Creative Therapy & Art Sessions</h3>
               <p>
-                Express yourself through creative art sessions, including painting, journaling, and mindful crafts.
+                Express yourself through creative art sessions, including
+                painting, journaling, and mindful crafts.
               </p>
             </div>
           </div>
         </div>
       </div>
     </section>
-
 
     <style>
       .service-card {
@@ -558,71 +564,86 @@
           </div>
         </div>
         <div class="row">
-          <div class="js-carousel-2 owl-carousel mb-5" data-aos="fade-up" data-aos-delay="200">
-            
+          <div
+            class="js-carousel-2 owl-carousel mb-5"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <div class="testimonial text-center slider-item">
               <blockquote>
-                <p>&ldquo;My stay at Sukha Retreats was very pleasant... great hotel near the Medical College and Airport. The service is superb. The front desk staff were awesome and friendly.&rdquo;</p>
+                <p>
+                  &ldquo;My stay at Sukha Retreats was very pleasant... great
+                  hotel near the Medical College and Airport. The service is
+                  superb. The front desk staff were awesome and friendly.&rdquo;
+                </p>
               </blockquote>
-              <p style="color: gold;">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+              <p style="color: gold">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
               <p><em>&mdash; Mark Asif</em></p>
             </div>
-            
+
             <div class="testimonial text-center slider-item">
               <blockquote>
                 <p>&ldquo;Very clean place, also great hospitality.&rdquo;</p>
               </blockquote>
-              <p style="color: gold;">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+              <p style="color: gold">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
               <p><em>&mdash; Hani Alkhalifa</em></p>
             </div>
-            
+
             <div class="testimonial text-center slider-item">
               <blockquote>
-                <p>&ldquo;Good ambiance, good service, and nice rooms. If you plan to visit Cochin, I highly recommend Sukha Retreats.&rdquo;</p>
+                <p>
+                  &ldquo;Good ambiance, good service, and nice rooms. If you
+                  plan to visit Cochin, I highly recommend Sukha
+                  Retreats.&rdquo;
+                </p>
               </blockquote>
-              <p style="color: gold;">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+              <p style="color: gold">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
               <p><em>&mdash; Majidakv Aifer</em></p>
             </div>
-            
+
             <div class="testimonial text-center slider-item">
               <blockquote>
-                <p>&ldquo;Had a great experience, visiting again soon!&rdquo;</p>
+                <p>
+                  &ldquo;Had a great experience, visiting again soon!&rdquo;
+                </p>
               </blockquote>
-              <p style="color: gold;">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+              <p style="color: gold">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
               <p><em>&mdash; Anu Saju</em></p>
             </div>
-            
+
             <div class="testimonial text-center slider-item">
               <blockquote>
                 <p>&ldquo;One of the best hospitality experiences.&rdquo;</p>
               </blockquote>
-              <p style="color: gold;">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+              <p style="color: gold">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
               <p><em>&mdash; Shine Kumar</em></p>
             </div>
-            
+
             <div class="testimonial text-center slider-item">
               <blockquote>
-                <p>&ldquo;A physical therapy center under the supervision of specialized doctors and a great team. It has advanced equipment, a swimming pool, and residential facilities for patients.&rdquo;</p>
+                <p>
+                  &ldquo;A physical therapy center under the supervision of
+                  specialized doctors and a great team. It has advanced
+                  equipment, a swimming pool, and residential facilities for
+                  patients.&rdquo;
+                </p>
               </blockquote>
-              <p style="color: gold;">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+              <p style="color: gold">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
               <p><em>&mdash; Ali Addous</em></p>
             </div>
-            
+
             <div class="testimonial text-center slider-item">
               <blockquote>
                 <p>&ldquo;Worth a try!&rdquo;</p>
               </blockquote>
-              <p style="color: gold;">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+              <p style="color: gold">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
               <p><em>&mdash; Abdulaziz Al Abri</em></p>
             </div>
-            
           </div>
           <!-- END slider -->
         </div>
       </div>
     </section>
-    
-    
 
     <section class="section blog-post-entry bg-light" id="section-events">
       <div class="container">
@@ -643,27 +664,26 @@
             data-aos="fade-up"
             data-aos-delay="100"
           >
-          <div class="media media-custom d-block mb-4 h-100">
-            <a href="#" class="mb-4 d-block">
-              <img
-                src="images/spa.webp"
-                alt="Luxury Spa Retreat"
-                class="img-fluid"
-              />
-            </a>
-            <div class="media-body">
-              <span class="meta-post">March 10, 2025</span>
-              <h2 class="mt-0 mb-3">
-                <a href="#">Serene Spa Escape: Rejuvenate Your Senses</a>
-              </h2>
-              <p>
-                Immerse yourself in tranquility with our signature spa treatments,
-                featuring soothing massages, aromatic therapies, and holistic wellness
-                experiences in a peaceful oasis.
-              </p>
+            <div class="media media-custom d-block mb-4 h-100">
+              <a href="#" class="mb-4 d-block">
+                <img
+                  src="images/spa.webp"
+                  alt="Luxury Spa Retreat"
+                  class="img-fluid"
+                />
+              </a>
+              <div class="media-body">
+                <span class="meta-post">March 10, 2025</span>
+                <h2 class="mt-0 mb-3">
+                  <a href="#">Serene Spa Escape: Rejuvenate Your Senses</a>
+                </h2>
+                <p>
+                  Immerse yourself in tranquility with our signature spa
+                  treatments, featuring soothing massages, aromatic therapies,
+                  and holistic wellness experiences in a peaceful oasis.
+                </p>
+              </div>
             </div>
-          </div>
-          
           </div>
           <div
             class="col-lg-4 col-md-6 col-sm-6 col-12 post"
@@ -696,58 +716,78 @@
             data-aos="fade-up"
             data-aos-delay="300"
           >
-          <div class="media media-custom d-block mb-4 h-100">
-            <a href="#" class="mb-4 d-block">
-              <img
-                src="images/pool.webp"
-                alt="Infinity Pool Retreat"
-                class="img-fluid"
-              />
-            </a>
-            <div class="media-body">
-              <span class="meta-post">March 10, 2025</span>
-              <h2 class="mt-0 mb-3">
-                <a href="#">Infinity Pool Bliss: Relax & Unwind</a>
-              </h2>
-              <p>
-                Dive into pure relaxation at our stunning infinity pool, where crystal-clear waters meet breathtaking views. Enjoy poolside cocktails, sun loungers, and a serene escape like no other.
-              </p>
+            <div class="media media-custom d-block mb-4 h-100">
+              <a href="#" class="mb-4 d-block">
+                <img
+                  src="images/pool.webp"
+                  alt="Infinity Pool Retreat"
+                  class="img-fluid"
+                />
+              </a>
+              <div class="media-body">
+                <span class="meta-post">March 10, 2025</span>
+                <h2 class="mt-0 mb-3">
+                  <a href="#">Infinity Pool Bliss: Relax & Unwind</a>
+                </h2>
+                <p>
+                  Dive into pure relaxation at our stunning infinity pool, where
+                  crystal-clear waters meet breathtaking views. Enjoy poolside
+                  cocktails, sun loungers, and a serene escape like no other.
+                </p>
+              </div>
             </div>
-          </div>
-          
           </div>
         </div>
       </div>
     </section>
 
-    <section class="py-5 bg-light" id="section-resort" style="padding-top: 60px; padding-bottom: 60px">
+    <section
+      class="py-5 bg-light"
+      id="section-resort"
+      style="padding-top: 60px; padding-bottom: 60px"
+    >
       <div class="container">
         <div class="row align-items-center">
           <!-- Video Column -->
           <div class="col-md-12 col-lg-7 order-lg-2 mb-5" data-aos="fade-up">
             <div class="embed-responsive embed-responsive-16by9">
               <iframe
-              class="embed-responsive-item"
-              src="https://www.youtube.com/embed/I5N3uAdqNlw?autoplay=1&mute=1&controls=0&modestbranding=1&showinfo=0&rel=0"
-              title="YouTube video player"
-              frameborder="0"
-              allow="autoplay; encrypted-media"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
-            
+                class="embed-responsive-item"
+                src="https://www.youtube.com/embed/I5N3uAdqNlw?autoplay=1&mute=1&controls=0&modestbranding=1&showinfo=0&rel=0"
+                title="YouTube video player"
+                frameborder="0"
+                allow="autoplay; encrypted-media"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
             </div>
           </div>
-    
+
           <!-- Text Content Column -->
           <div class="col-md-12 col-lg-5 order-lg-1" data-aos="fade-up">
-            <h2 class="heading mb-4" style="font-size: 2.5rem; font-weight: 700; color: #2c3e50">
+            <h2
+              class="heading mb-4"
+              style="font-size: 2.5rem; font-weight: 700; color: #2c3e50"
+            >
               Welcome to Paradise
             </h2>
-            <p class="mb-5" style="font-size: 1.125rem; color: #7b8a8b; line-height: 1.6">
-              Experience luxury like never before at our world-class resort. Nestled between pristine beaches and breathtaking landscapes, we offer exquisite accommodations, fine dining, and top-notch amenities for a truly unforgettable stay.
+            <p
+              class="mb-5"
+              style="font-size: 1.125rem; color: #7b8a8b; line-height: 1.6"
+            >
+              Experience luxury like never before at our world-class resort.
+              Nestled between pristine beaches and breathtaking landscapes, we
+              offer exquisite accommodations, fine dining, and top-notch
+              amenities for a truly unforgettable stay.
             </p>
-            <ul style="font-size: 1.125rem; color: #34495e; line-height: 1.8; padding-left: 20px">
+            <ul
+              style="
+                font-size: 1.125rem;
+                color: #34495e;
+                line-height: 1.8;
+                padding-left: 20px;
+              "
+            >
               <li>Exclusive beachfront villas</li>
               <li>Spa and wellness retreats</li>
               <li>Gourmet dining experiences</li>
@@ -758,7 +798,6 @@
         </div>
       </div>
     </section>
-
 
     <section
       class="section bg-image overlay"
@@ -810,7 +849,7 @@
             <img
               src="images/sukha white png.png"
               alt="Sukha Retreats Logo"
-              style="height: 70px"
+              style="height: 100px"
             />
             <p>4.824 Google reviews</p>
             <p>Hotel & Resorts</p>
@@ -885,140 +924,6 @@
         }
       }
     </style>
-
-    <!-- Modal -->
-    <div
-      class="modal fade"
-      id="reservation-form"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="reservationFormTitle"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-body">
-            <div class="row">
-              <div class="col-md-12" data-aos="fade-up" data-aos-delay="100">
-                <form action="index.html" method="post" class="bg-white p-4">
-                  <div class="row mb-4">
-                    <div class="col-12"><h2>Reservation</h2></div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-6 form-group">
-                      <label class="text-black font-weight-bold" for="name"
-                        >Name</label
-                      >
-                      <input type="text" id="name" class="form-control" />
-                    </div>
-                    <div class="col-md-6 form-group">
-                      <label class="text-black font-weight-bold" for="phone"
-                        >Phone</label
-                      >
-                      <input type="text" id="phone" class="form-control" />
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-md-12 form-group">
-                      <label class="text-black font-weight-bold" for="email"
-                        >Email</label
-                      >
-                      <input type="email" id="email" class="form-control" />
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-md-6 form-group">
-                      <label
-                        class="text-black font-weight-bold"
-                        for="checkin_date"
-                        >Date Check In</label
-                      >
-                      <input
-                        type="text"
-                        id="checkin_date"
-                        class="form-control"
-                      />
-                    </div>
-                    <div class="col-md-6 form-group">
-                      <label
-                        class="text-black font-weight-bold"
-                        for="checkout_date"
-                        >Date Check Out</label
-                      >
-                      <input
-                        type="text"
-                        id="checkout_date"
-                        class="form-control"
-                      />
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-md-6 form-group">
-                      <label for="adults" class="font-weight-bold text-black"
-                        >Adults</label
-                      >
-                      <div class="field-icon-wrap">
-                        <div class="icon">
-                          <span class="ion-ios-arrow-down"></span>
-                        </div>
-                        <select name="" id="adults" class="form-control">
-                          <option value="">1</option>
-                          <option value="">2</option>
-                          <option value="">3</option>
-                          <option value="">4+</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="col-md-6 form-group">
-                      <label for="children" class="font-weight-bold text-black"
-                        >Children</label
-                      >
-                      <div class="field-icon-wrap">
-                        <div class="icon">
-                          <span class="ion-ios-arrow-down"></span>
-                        </div>
-                        <select name="" id="children" class="form-control">
-                          <option value="">1</option>
-                          <option value="">2</option>
-                          <option value="">3</option>
-                          <option value="">4+</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row mb-4">
-                    <div class="col-md-12 form-group">
-                      <label class="text-black font-weight-bold" for="message"
-                        >Notes</label
-                      >
-                      <textarea
-                        name="message"
-                        id="message"
-                        class="form-control"
-                        cols="30"
-                        rows="8"
-                      ></textarea>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-6 form-group">
-                      <input
-                        type="submit"
-                        value="Reserve Now"
-                        class="btn btn-primary text-white py-3 px-5 font-weight-bold"
-                      />
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/jquery-migrate-3.0.1.min.js"></script>
